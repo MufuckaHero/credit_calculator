@@ -14,12 +14,13 @@ post '/calculate' do
   if params[:percent].to_i <= 0 || params[:credit].to_i <= 0 || params[:term].to_i <= 0
     "Введені значення повинні бути більше 0!"
   else
-
-    if params[:payOff] == "Usual"
-      @result = CreditCalculator.new(params[:percent], params[:credit],params[:term])
-    else
-      @result = Acredit.new(params[:percent], params[:credit],params[:term])
-    end
+    
+    @result = 
+      if params[:payOff] == "Usual"
+        CreditCalculator.new(params[:percent], params[:credit],params[:term])
+      else
+        Acredit.new(params[:percent], params[:credit],params[:term])
+      end
  
     @result.calculate
     erb :calculate
