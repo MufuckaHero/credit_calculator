@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Побудувати графік платежів</title>
+  </head>
+  <body>
+    <form method="post" action="/calculate">
+      <label for="percent"> Процентна ставка(%): </label>
+      <input id="percent" type="number" name="percent" value="" min="1"><br>
+      <label for="credit"> Сума кредиту: </label>
+      <input id="credit" type="number" name="credit" value="" min="1"><br>
+      <label for="term"> Термін кредиту (в місяцях): </label>
+      <input id="term" type="number" name="term" value="" min="1"> <br>
+      <label>Метод погашення кредиту:</label><br>
+      <label for="payOffUsual">Стандартний</label>
+      <input type="radio" name="payOff" id="payOffUsual" value="Usual" checked=""> <br>
+      <label for="payOffEqual">Ануїтетний (рівними частинами)</label>
+      <input type="radio" name="payOff" id="payOffEqual" value="Equal"><br>
+      <input type="submit" value="Побудувати графік">
+    </form>
+  </body>
+</html>

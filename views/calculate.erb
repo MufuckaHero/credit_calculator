@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Графік платежів</title>
+  </head>
+  <body>
+    <table border='1'>
+      <caption>Графік платежів</caption>
+      <tr>
+        <th>погашення кредиту</th>
+        <% @result.payment.map do |p| %>
+          <td><%= p.round(2) %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <th>погашення %</th>
+        <% @result.month_percent.map do |p| %>
+          <td><%= p.round(2) %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <th>загальний внесок</th>
+        <% @result.all_payment.map do |p| %>
+          <td><%= p.round(2) %></td>
+        <% end %>
+      </tr>
+      <tr>
+        <th>залишок кредиту</th>
+        <% @result.credit.map do |p| %>
+          <td><%= p.round(2) %></td>
+        <% end %>
+      </tr>
+    </table>
+  </body>
+</html>
