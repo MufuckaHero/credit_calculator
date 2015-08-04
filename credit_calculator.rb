@@ -1,5 +1,4 @@
 class CreditCalculator 
-
   attr_accessor :payment, :month_percent, :all_payment, :credit
 
   def initialize(percent, credit, term)
@@ -19,11 +18,9 @@ class CreditCalculator
       @credit << @credit.last - @payment.last
     end
   end
-
 end
 
 class Acredit < CreditCalculator
-
   def calculate
     @payment = []
     @month_percent = []
@@ -36,5 +33,4 @@ class Acredit < CreditCalculator
       @credit << @credit.last - @payment.last
     end
   end
-
 end
