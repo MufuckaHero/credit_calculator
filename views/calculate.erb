@@ -9,25 +9,25 @@
       <caption>Графік платежів</caption>
       <tr>
         <th>погашення кредиту</th>
-        <% @result.payment.map do |p| %>
+        <% @result.payment.each do |p| %>
           <td><%= p.round(2) %></td>
         <% end %>
       </tr>
       <tr>
         <th>погашення %</th>
-        <% @result.month_percent.map do |p| %>
+        <% @result.month_percent.each do |p| %>
           <td><%= p.round(2) %></td>
         <% end %>
       </tr>
       <tr>
         <th>загальний внесок</th>
-        <% @result.all_payment.map do |p| %>
+        <% @result.all_payment.each do |p| %>
           <td><%= p.round(2) %></td>
         <% end %>
       </tr>
       <tr>
         <th>залишок кредиту</th>
-        <% @result.credit.map do |p| %>
+        <% @result.credit.each do |p| %>
           <td><%= p.round(2) %></td>
         <% end %>
       </tr>
