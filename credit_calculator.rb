@@ -1,5 +1,5 @@
 class CreditCalculator 
-  attr_accessor :payment, :month_percent, :all_payment, :credit
+  attr_reader :payment, :month_percent, :all_payment, :credit
 
   def initialize(percent, credit, term)
     @percent = percent.to_f
